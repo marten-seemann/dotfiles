@@ -1,0 +1,36 @@
+[user]
+	name = 
+	email = martenseemann@gmail.com
+[core]
+	excludesfile = /Users/marten/.gitignore_global
+	quotepath = false
+[alias]
+  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+  timelog = log --pretty=format:'%Cred%h%Creset - %C(yellow)%ae%Creset - %Cgreen%cd%Creset - %s%Creset' --abbrev-commit --date=iso
+
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[gui]
+	recentrepo = /Users/marten/Documents/git_uebung
+[difftool]
+	prompt = false
+[diff]
+	tool = araxis
+[merge]
+	tool = araxis
+
+[difftool "Kaleidoscope"]
+	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+[difftool "araxis"]
+	external = /usr/local/bin/araxisgitdiff
+	renames = true
+[mergetool "araxis"]
+  external = /usr/local/bin/araxisgitmerge
+	cmd = araxis-mergetool \"$LOCAL\" \"$REMOTE\" \"$MERGED\" \"$BASE\"
+	renames = true

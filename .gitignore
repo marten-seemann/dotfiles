@@ -1,0 +1,17 @@
+*
+!.gitignore
+!.gitmodules
+!.gitconfig
+!.gitignore_global
+!.zshrc
+!.vimrc
+
+!.ackrc
+
+!.zsh/
+!.zsh/*
+!.zsh/*/*
+!.zsh/*/*/*
+!.zsh/*/*/*/*
+!.zsh/*/*/*/*/*
+
