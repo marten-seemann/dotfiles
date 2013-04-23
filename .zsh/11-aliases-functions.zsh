@@ -1,12 +1,3 @@
-update() {
-  # gem update
-  # rbenv rehash
-  brew update
-  brew upgrade
-  brew cleanup
-  npm update
-}
-
 # see http://alias.sh/extract-most-know-archives-one-command
 ex () {
     if [ -f $1 ] ; then
@@ -32,10 +23,4 @@ ex () {
 # see http://alias.sh/make-and-cd-directory
 function mcd() {
   mkdir -p "$1" && cd "$1";
-}
-
-function clean_contextmenu() {
-  /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user
-  killall Finder
-  echo "Open With has been rebuilt, Finder will relaunch"
 }
