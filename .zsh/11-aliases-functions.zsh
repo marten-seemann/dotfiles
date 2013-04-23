@@ -1,10 +1,10 @@
 update() {
-  # npm -g update
   # gem update
   # rbenv rehash
   brew update
   brew upgrade
   brew cleanup
+  npm update
 }
 
 # see http://alias.sh/extract-most-know-archives-one-command

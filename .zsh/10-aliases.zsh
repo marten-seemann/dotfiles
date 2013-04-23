@@ -13,6 +13,7 @@ alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias rm_dsstore="find . -name '*.DS_Store' -type f -delete"
 alias wget='wget --content-disposition'
 alias diff=colordiff
+alias sdiff="git diff --color-words --no-index"
 alias ccat=vimcat
 
 # git stuff

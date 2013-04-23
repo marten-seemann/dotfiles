@@ -14,4 +14,4 @@
 !.zsh/*/*/*
 !.zsh/*/*/*/*
 !.zsh/*/*/*/*/*
-
+.zsh/*private.zsh
