@@ -21,6 +21,10 @@ ex () {
 }
 
 # see http://alias.sh/make-and-cd-directory
-function mcd() {
-  mkdir -p "$1" && cd "$1";
+function mkcd() {
+    mkdir -p "$1" && cd "$1";
+}
+
+function update_dotfiles_submodules() {
+    cd $HOME && git submodule -q foreach git pull -q origin master && cd - > /dev/null;
 }

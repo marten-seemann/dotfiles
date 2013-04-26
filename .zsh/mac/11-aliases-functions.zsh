@@ -11,4 +11,5 @@ update() {
   brew upgrade
   brew cleanup
   npm update
+  update_dotfiles_submodules
 }
