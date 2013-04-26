@@ -1,0 +1,4 @@
+{
+  "filename_filter": "\\.(coffee|sass|less|scss)$",
+  "build_on_save": 1
+}

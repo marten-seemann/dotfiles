@@ -1,0 +1,35 @@
+{
+	"bold_folder_labels": true,
+	"caret_style": "phase",
+	"color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow.tmTheme",
+	"default_encoding": "UTF-8",
+	"ensure_newline_at_eof_on_save": true,
+	"fade_fold_buttons": false,
+	"find_selected_text": true,
+	"font_size": 11.0,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Vintage",
+		"SublimeCodeIntel",
+		"SublimeOnSaveBuild",
+		"SublimeLinter"
+	],
+	"indent_guide_options":
+	[
+		"draw_active"
+	],
+	"margin": -2,
+	"open_files_in_new_window": false,
+	"rulers":
+	[
+	],
+	"scroll_past_end": true,
+	"tab_size": 2,
+	"terminal": "/usr/local/bin/zsh",
+	"theme": "Pseudo OSX Light.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": "true"
+}

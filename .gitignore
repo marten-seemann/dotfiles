@@ -15,3 +15,10 @@
 !.zsh/*/*/*/*
 !.zsh/*/*/*/*/*
 .zsh/*private.zsh
+
+!.sublime/
+!.sublime/*
+!.sublime/*/*
+!.sublime/*/*/*
+!.sublime/*/*/*/*
+!.sublime/*/*/*/*/*
