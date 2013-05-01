@@ -28,3 +28,14 @@ function mkcd() {
 function update_dotfiles_submodules() {
     cd $HOME && git submodule -q foreach git pull -q origin master && cd - > /dev/null;
 }
+
+# see http://cfc.kizzx2.com/index.php/localproject-based-ackrc/
+function ack() {
+  ackrc=""
+  if [ -f ./.ackrc ]
+  then
+    ackrc=$(cat ~/.ackrc ./.ackrc | tr ‘\n’ ‘ ‘)
+  fi
+
+  command ack $ackrc $*
+}
