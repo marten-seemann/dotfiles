@@ -3,7 +3,6 @@ alias make='make -j9'
 alias op='open .'
 alias s='subl -n'
 
-alias ls='ls -Gh'
 alias la='ls -la'
 alias lt='ls -ltr'
 

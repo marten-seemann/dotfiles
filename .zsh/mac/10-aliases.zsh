@@ -1,3 +1,5 @@
+alias ls='ls -Gh'
+
 # OS X has no `md5sum`, so use `md5` as a fallback
 command -v md5sum > /dev/null || alias md5sum="md5"
 
