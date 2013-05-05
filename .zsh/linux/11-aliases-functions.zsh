@@ -2,5 +2,5 @@ update() {
   apt-get update
   apt-get upgrade
   apt-get autoremove
-  update_dotfiles_submodules
+  _update_dotfiles_submodules
 }

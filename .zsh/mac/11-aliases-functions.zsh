@@ -5,11 +5,11 @@ function clean_contextmenu() {
 }
 
 update() {
-  # gem update
-  # rbenv rehash
   brew update
   brew upgrade
   brew cleanup
+  gem update
+  rbenv rehash
   npm update
-  update_dotfiles_submodules
+  _update_dotfiles_submodules
 }

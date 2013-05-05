@@ -6,6 +6,9 @@ alias s='subl -n'
 alias ls='ls -Gh'
 alias la='ls -la'
 alias lt='ls -ltr'
+
+alias grep='grep --color=auto'
+
 alias t=trash
 
 alias pg='ping 8.8.8.8'

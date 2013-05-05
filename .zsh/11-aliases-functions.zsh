@@ -25,7 +25,7 @@ function mkcd() {
     mkdir -p "$1" && cd "$1";
 }
 
-function update_dotfiles_submodules() {
+function _update_dotfiles_submodules() {
     cd $HOME && git submodule -q foreach git pull -q origin master && cd - > /dev/null;
 }
 
@@ -39,3 +39,8 @@ function ack() {
 
   command ack $ackrc $*
 }
+
+function localip() {
+  ifconfig | grep "inet " | awk '{ print $2 }'
+}
+
