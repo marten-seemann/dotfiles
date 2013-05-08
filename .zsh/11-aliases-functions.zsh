@@ -34,7 +34,9 @@ function ack() {
   ackrc=""
   if [ -f ./.ackrc ]
   then
-    ackrc=$(cat ~/.ackrc ./.ackrc | tr ‘\n’ ‘ ‘)
+    ackrc1=$(cat ./.ackrc | grep -v '#' | tr '\n' ' ')
+    ackrc2=$(cat $HOME/.ackrc | grep -v '#' | tr '\n' ' ')
+    ackrc="$ackrc1 $ackrc2"
   fi
 
   command ack $ackrc $*

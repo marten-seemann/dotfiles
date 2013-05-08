@@ -10,6 +10,7 @@ alias grep='grep --color=auto'
 
 alias t=trash
 
+alias reload='source ~/.zshrc'
 alias pg='ping 8.8.8.8'
 alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias rm_dsstore="find . -name '*.DS_Store' -type f -delete"
@@ -17,6 +18,7 @@ alias wget='wget --content-disposition'
 alias diff=colordiff
 alias sdiff="git diff --color-words --no-index"
 alias ccat=vimcat
+alias cx='chmod +x'
 
 # git stuff
 alias gs='git status -sb'

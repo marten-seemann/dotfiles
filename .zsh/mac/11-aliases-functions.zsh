@@ -13,3 +13,7 @@ update() {
   npm update
   _update_dotfiles_submodules
 }
+
+function manp() {
+  man -t $@ | open -f -a /Applications/Preview.app
+}

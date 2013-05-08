@@ -1,8 +1,13 @@
---type-add
-js=.coffee
---type-set
-coffee=.coffee
---type-add
-tpl=.tpl
---type-add
-less=.less
+# General Ack Settings
+####################################################################
+
+# only search with case sensitivity if there is mixed case
+--smart-case
+# follow symlinks
+--follow
+
+
+--type-add=js=.coffee
+--type-set=coffee=.coffee
+--type-add=tpl=.tpl
+--type-add=less=.less
