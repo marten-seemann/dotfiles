@@ -12,9 +12,8 @@
 	"ignored_packages":
 	[
 		"Vintage",
-		"SublimeCodeIntel",
-		"SublimeOnSaveBuild",
-		"SublimeLinter"
+		"SublimeLinter",
+		"SublimeOnSaveBuild"
 	],
 	"indent_guide_options":
 	[
