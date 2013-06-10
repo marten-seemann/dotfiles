@@ -3,6 +3,7 @@ alias make='make -j9'
 alias op='open .'
 alias s='subl -n'
 
+alias l='ll'
 alias la='ls -la'
 alias lt='ls -ltr'
 
@@ -19,10 +20,11 @@ alias diff=colordiff
 alias sdiff="git diff --color-words --no-index"
 alias ccat=vimcat
 alias cx='chmod +x'
+alias du='du -sh'
 
 # git stuff
 alias gs='git status -sb'
-alias gl='git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen (%cr) %C(bold blue)%Creset' --abbrev-commit"
 
 # Directory traversal
 alias ..='cd ..'

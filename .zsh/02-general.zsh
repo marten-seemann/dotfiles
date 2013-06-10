@@ -1,6 +1,3 @@
-# enable autojump
-[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
-
 # Shell options
 export LSCOLORS="" # reset colors set by oh-my-zsh
 

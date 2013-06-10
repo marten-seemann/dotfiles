@@ -5,13 +5,19 @@ function clean_contextmenu() {
 }
 
 update() {
+  echo "Updating brew..."
   brew update
   brew upgrade
   brew cleanup
+  echo "Updating gem..."
   gem update
+  echo "Updating rbenv..."
   rbenv rehash
+  echo "Updating npm..."
   npm update
+  echo "Updating dotfile submodules..."
   _update_dotfiles_submodules
+  reload
 }
 
 function manp() {

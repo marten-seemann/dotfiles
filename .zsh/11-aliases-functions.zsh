@@ -42,7 +42,15 @@ function ack() {
   command ack $ackrc $*
 }
 
+function ffind() {
+  find . -name "*$1*" | colout "$1"
+}
+
 function localip() {
   ifconfig | grep "inet " | awk '{ print $2 }'
 }
 
+# see http://alias.sh/node/816function
+function rdns() {
+    dig +short $1 | xargs -L 5 nslookup | grep name
+}
