@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/marten/.zsh'
+let g:netrw_dirhist_2='/Users/marten/bin/cctbx'
+let g:netrw_dirhist_3='/System/Library/Filters'
+let g:netrw_dirhist_4='/System/Library'

@@ -1,13 +1,12 @@
-[submodule ".zsh/zsh-history-substring-search"]
-	path = .zsh/zsh-history-substring-search
+[submodule "zsh/.zsh/zsh-history-substring-search"]
+	path = zsh/.zsh/zsh-history-substring-search
 	url = git://github.com/zsh-users/zsh-history-substring-search.git
-[submodule ".zsh/zsh-syntax-highlighting"]
-	path = .zsh/zsh-syntax-highlighting
+[submodule "zsh/.zsh/zsh-syntax-highlighting"]
+	path = zsh/.zsh/zsh-syntax-highlighting
 	url = git://github.com/zsh-users/zsh-syntax-highlighting.git
-[submodule ".vim/vim-tommorow-theme"]
-  path = .vim/vim-tommorow-theme
-  url = https://github.com/chriskempson/vim-tomorrow-theme
-
-[submodule ".zsh/oh-my-zsh"]
-	path = .zsh/oh-my-zsh
+[submodule "zsh/.zsh/oh-my-zsh"]
+	path = zsh/.zsh/oh-my-zsh
 	url = git://github.com/robbyrussell/oh-my-zsh.git
+[submodule "vim/.vim/vim-tomorrow-theme"]
+	path = vim/.vim/vim-tomorrow-theme
+	url = git://github.com/chriskempson/vim-tomorrow-theme
