@@ -1,5 +1,4 @@
 alias _=sudo
-alias make='make -j9'
 alias op='open .'
 alias s='subl -n'
 
