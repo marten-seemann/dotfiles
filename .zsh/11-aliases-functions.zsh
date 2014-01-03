@@ -20,6 +20,34 @@ ex () {
      fi
 }
 
+# create a backup copy
+cpb() { cp $@{,.bak} ;}
+
+# remove host identification from ssh
+rmhost() {
+  ssh-keygen -f "$HOME/.ssh/known_hosts" -R $1
+}
+
+# see https://chris-lamb.co.uk/posts/can-you-get-cp-to-give-a-progress-bar-like-wget
+cp_p()
+{
+   strace -q -ewrite cp -- "${1}" "${2}" 2>&1 \
+      | awk '{
+        count += $NF
+            if (count % 10 == 0) {
+               percent = count / total_size * 100
+               printf "%3d%% [", percent
+               for (i=0;i<=percent;i++)
+                  printf "="
+               printf ">"
+               for (i=percent;i<100;i++)
+                  printf " "
+               printf "]\r"
+            }
+         }
+         END { print "" }' total_size=$(stat -c '%s' "${1}") count=0
+}
+
 # see http://alias.sh/make-and-cd-directory
 function mkcd() {
     mkdir -p "$1" && cd "$1";
@@ -42,6 +70,10 @@ function ack() {
   command ack $ackrc $*
 }
 
+# function du() {
+#   command du $1 | colout "^\s*\w+\s" red
+# }
+
 function ffind() {
   find . -name "*$1*" | colout "$1"
 }
@@ -53,4 +85,19 @@ function localip() {
 # see http://alias.sh/node/816function
 function rdns() {
     dig +short $1 | xargs -L 5 nslookup | grep name
+}
+
+#get image dimensions
+function dim() { 
+  sips $1 -g pixelWidth -g pixelHeight
+}
+
+# open Google Chrome with an empty profile
+function chrome_empty() {
+  tmpdir=`mktemp -d -t chrome`
+  /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --user-data-dir=$tmpdir
+}
+
+function geoip { 
+  curl -D - http://freegeoip.net/xml/$1; 
 }

@@ -15,6 +15,7 @@
 !.zsh/*/*/*/*
 !.zsh/*/*/*/*/*
 .zsh/*private.zsh
+.zsh/*test.zsh
 
 !.sublime/
 !.sublime/*
@@ -22,3 +23,11 @@
 !.sublime/*/*/*
 !.sublime/*/*/*/*
 !.sublime/*/*/*/*/*
+
+
+.DS_Store
+
+
+# !.ssh/
+# .ssh/*
+# !.ssh/config

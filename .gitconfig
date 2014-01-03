@@ -21,12 +21,12 @@
 [difftool]
 	prompt = false
 [diff]
-	tool = araxis
+	tool = Kaleidoscope
 [merge]
-	tool = araxis
+	tool = Kaleidoscope
 
 [difftool "Kaleidoscope"]
-	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [difftool "araxis"]
 	external = /usr/local/bin/araxisgitdiff
 	renames = true
@@ -34,3 +34,10 @@
   external = /usr/local/bin/araxisgitmerge
 	cmd = araxis-mergetool \"$LOCAL\" \"$REMOTE\" \"$MERGED\" \"$BASE\"
 	renames = true
+#[push]
+#	default = simple
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[mergetool]
+	prompt = false

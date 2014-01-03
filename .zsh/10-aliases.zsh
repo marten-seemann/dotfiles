@@ -6,6 +6,7 @@ alias s='subl -n'
 alias l='ll'
 alias la='ls -la'
 alias lt='ls -ltr'
+alias ldir="ls -l | egrep '^d'"
 
 alias grep='grep --color=auto'
 
@@ -20,7 +21,6 @@ alias diff=colordiff
 alias sdiff="git diff --color-words --no-index"
 alias ccat=vimcat
 alias cx='chmod +x'
-alias du='du -sh'
 
 # git stuff
 alias gs='git status -sb'
