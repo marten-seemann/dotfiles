@@ -30,20 +30,21 @@ prompt_end() {
 # username will be omitted if it matches the environment variable DEFAULT_USER
 prompt_context() {
   local user=`whoami`
+  local hostname=`hostname`
 
-  if [[ -n "$SSH_CLIENT" ]]; then
+  if [[ "$hostname" != "$DEFAULT_HOST" ]]; then
     if [[ "$user" != "$DEFAULT_USER" ]]; then
       prompt_segment default yellow "%(!.%{%F{yellow}%}.)$user"
       prompt_segment default white "@"
     fi
-    prompt_segment default green "%B%m%b"
+    prompt_segment default green "%B%M%b"
     echo -n " "
   fi
 }
 
 # Dir: current working directory
 prompt_dir() {
-  prompt_segment black blue '%~'
+  prompt_segment black blue '%B%~%b'
   prompt_segment default default " "
 }
 
