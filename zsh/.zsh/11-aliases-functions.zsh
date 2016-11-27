@@ -54,7 +54,9 @@ function mkcd() {
 }
 
 function _update_dotfiles_submodules() {
-    cd $HOME && git submodule -q foreach git pull -q origin master && cd - > /dev/null;
+    cd $HOME/dotfiles
+    git submodule -q foreach git pull -q origin master
+    cd - > /dev/null
 }
 
 # see http://cfc.kizzx2.com/index.php/localproject-based-ackrc/
