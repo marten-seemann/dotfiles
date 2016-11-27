@@ -1,5 +1,5 @@
 alias _=sudo
-alias op='open .'
+alias o='open .'
 alias s='subl -n'
 
 alias l='ll'
