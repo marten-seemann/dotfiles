@@ -6,8 +6,6 @@ export EDITOR=vim
 
 export WORDCHARS='*?[]~&;!$%^<>'
 
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages
-
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
 
