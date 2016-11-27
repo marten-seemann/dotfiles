@@ -11,6 +11,8 @@ alias grep='grep --color=auto'
 
 alias t=trash
 
+alias timestamp='date +%s'
+
 alias reload='source ~/.zshrc'
 alias pg='ping 8.8.8.8'
 alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
