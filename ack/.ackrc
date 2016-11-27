@@ -11,3 +11,4 @@
 --type-set=coffee=.coffee
 --type-add=tpl=.tpl
 --type-add=less=.less
+--type-add=erb=.erb
