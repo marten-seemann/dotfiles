@@ -7,7 +7,7 @@ function clean_contextmenu() {
 update() {
   echo "Updating brew..."
   brew update
-  brew upgrade --all
+  brew upgrade
   brew cleanup
   echo "Updating gem..."
   gem update
