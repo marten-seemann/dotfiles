@@ -120,4 +120,17 @@ function webstats () {
   ' -o /dev/null -s $site
   echo
 }
+
+# From https://gist.github.com/lelandbatey/8677901
+whiteboardCleanup() {
+  for f in "$@"; do
+    convert "$f" -morphology Convolve DoG:15,100,0 -negate -normalize -blur 0x1 -channel RBG -level 60%,91%,0.1 "$(basename $f .jpg).clean.jpg" &
+  done
+  wait
+}
+
+whiteboardReplaceCleaned() {
+  for f in *.clean.jpg; do
+    mv "$f" "$(basename $f .clean.jpg).jpg"
+  done
 }
