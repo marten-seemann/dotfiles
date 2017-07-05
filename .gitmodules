@@ -7,6 +7,3 @@
 [submodule "zsh/.zsh/oh-my-zsh"]
 	path = zsh/.zsh/oh-my-zsh
 	url = git://github.com/robbyrussell/oh-my-zsh.git
-[submodule "vim/.vim/vim-tomorrow-theme"]
-	path = vim/.vim/vim-tomorrow-theme
-	url = git://github.com/chriskempson/vim-tomorrow-theme

@@ -1,5 +1,4 @@
 syntax on
-source $HOME/.vim/vim-tomorrow-theme/colors/Tomorrow-Night-Blue.vim
 
 filetype on
 set nocompatible
