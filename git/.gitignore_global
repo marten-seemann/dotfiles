@@ -45,6 +45,7 @@ Backup[ ]of[ ]*.pages/
 Backup[ ]of[ ]*.key/
 Backup[ ]of[ ]*.numbers/
 *.sublime-workspace
+*.vscode
 
 # Cover profiles
 *.coverprofile
