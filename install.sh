@@ -3,7 +3,7 @@
 git submodule init
 git submodule update
 
-stow -t $HOME zsh vim git ack
+stow -t $HOME zsh vim git ack tmux
 
 if [[ `uname` == 'Linux' ]]; then
   echo "Setting zsh as default shell"
