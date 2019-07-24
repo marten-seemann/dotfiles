@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/.zsh/oh-my-zsh
+export ANTIBODY_HOME="$(antibody home)"
+export ZSH="$ANTIBODY_HOME"/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
