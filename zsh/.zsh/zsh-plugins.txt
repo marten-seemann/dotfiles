@@ -1,1 +1,1 @@
-robbyrussell/oh-my-zsh
+romkatv/powerlevel10k

@@ -1,5 +1,7 @@
 source <(antibody init)
 
+export ANTIBODY_HOME="$(antibody home)"
+
 for file in ~/.zsh/*.zsh; do
   source "$file"
 done
