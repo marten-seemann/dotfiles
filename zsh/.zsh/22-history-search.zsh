@@ -1,5 +1,3 @@
-source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
-
 # begin default configuration for completions
 # bind UP and DOWN arrow keys
 for keycode in '[' '0'; do
