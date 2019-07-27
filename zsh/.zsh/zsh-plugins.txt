@@ -1,3 +1,4 @@
 romkatv/powerlevel10k
 zsh-users/zsh-completions
 zsh-users/zsh-history-substring-search
+zdharma/fast-syntax-highlighting
