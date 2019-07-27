@@ -15,8 +15,8 @@ update() {
   rbenv rehash
   echo "Updating npm..."
   npm update
-  echo "Updating dotfile submodules..."
-  _update_dotfiles_submodules
+  echo "Updating antibody..."
+  antibody update
   reload
 }
 
