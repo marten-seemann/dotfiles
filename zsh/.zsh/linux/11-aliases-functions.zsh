@@ -1,7 +1,7 @@
 update() {
-  apt-get update
-  apt-get upgrade
-  apt-get autoremove 
+  apt update
+  apt upgrade
+  apt autoremove 
   echo "Updating antibody..."
   antibody update
   reload
