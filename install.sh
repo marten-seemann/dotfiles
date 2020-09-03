@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [[ `uname -v` =~ "Ubuntu" ]]; then
+  apt-get update
+  apt-get install -y zsh git stow autojump vim tmux
+fi
+
 git submodule init
 git submodule update
 
