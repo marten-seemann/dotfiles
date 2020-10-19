@@ -9,8 +9,6 @@ alias ldir="ls -l | egrep '^d'"
 
 alias grep='grep --color=auto'
 
-alias t=trash
-
 alias timestamp='date +%s'
 
 alias reload='source ~/.zshrc'
