@@ -1,6 +1,4 @@
 # Shell options
-export LSCOLORS="" # reset colors set by oh-my-zsh
-
 export TERM=xterm-256color
 export EDITOR=vim
 
