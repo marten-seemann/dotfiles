@@ -22,6 +22,10 @@ alias sdiff="git diff --color-words --no-index"
 alias ccat=vimcat
 alias cx='chmod +x'
 
+# youtube-dl was abandoned
+# see https://github.com/yt-dlp/yt-dlp
+alias youtube-dl=yt-dlp
+
 # git stuff
 alias gs='git status -sb'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen (%cr) %C(bold blue)%Creset' --abbrev-commit"
