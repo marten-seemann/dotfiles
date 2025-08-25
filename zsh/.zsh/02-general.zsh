@@ -7,6 +7,8 @@ export WORDCHARS='*?[]~&;!$%^<>'
 
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
+bindkey '^A' beginning-of-line
+bindkey '^E' end-of-line
 
 # correct_all sometimes recommends corrections at the wrong places
 unsetopt correct_all
