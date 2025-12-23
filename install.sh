@@ -13,7 +13,7 @@ fi
 git submodule init
 git submodule update
 
-stow -t $HOME zsh vim git ack tmux
+stow -t $HOME zsh vim git tmux
 
 if [[ `uname` == 'Darwin' ]]; then
   brew install antibody
