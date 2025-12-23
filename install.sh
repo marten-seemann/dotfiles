@@ -1,8 +1,13 @@
 #!/bin/bash
 
 if [[ `uname -v` =~ "Ubuntu" ]]; then
-  apt-get update
-  apt-get install -y zsh git stow autojump vim tmux
+  if [[ $EUID -eq 0 ]]; then
+    apt-get update
+    apt-get install -y zsh git stow autojump vim tmux
+  else
+    echo "Run the following command to install the dependencies:"
+    echo "sudo apt update && sudo apt install -y zsh git stow autojump vim tmux"
+  fi
 fi
 
 git submodule init
