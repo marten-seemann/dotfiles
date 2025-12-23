@@ -3,10 +3,10 @@
 if [[ `uname -v` =~ "Ubuntu" ]]; then
   if [[ $EUID -eq 0 ]]; then
     apt-get update
-    apt-get install -y zsh git stow zoxide vim tmux
+    apt-get install -y zsh git stow zoxide fzf vim tmux
   else
     echo "Run the following command to install the dependencies:"
-    echo "sudo apt update && sudo apt install -y zsh git stow zoxide vim tmux"
+    echo "sudo apt update && sudo apt install -y zsh git stow zoxide fzf vim tmux"
   fi
 fi
 
