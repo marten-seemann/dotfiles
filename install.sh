@@ -20,6 +20,8 @@ if [[ `uname` == 'Darwin' ]]; then
 fi
 
 if [[ `uname` == 'Linux' ]]; then
+  git clone --depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:-$HOME}/.antidote
+  
   # ask the user to set the hostname
   orig=$(head -n1 /etc/hostname)
   read -e -p "Hostname: " -i $orig hostname
