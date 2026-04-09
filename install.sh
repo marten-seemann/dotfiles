@@ -13,7 +13,7 @@ fi
 git submodule init
 git submodule update
 
-stow -t $HOME zsh vim git tmux
+stow -t $HOME zsh vim git tmux ghostty
 
 if [[ `uname` == 'Darwin' ]]; then
   brew install antidote
