@@ -15,7 +15,7 @@ update() {
   rbenv rehash
   echo "Updating npm..."
   npm update
-  echo "Updating antidote..."
+  echo "Updating antidote plugins..."
   antidote update
   reload
 }

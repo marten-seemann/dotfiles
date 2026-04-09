@@ -1,6 +1,3 @@
-source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
-source <(antidote init)
-antidote bundle < ~/.zsh/zsh-plugins.txt
 
 for file in ~/.zsh/*.zsh; do
   source "$file"
