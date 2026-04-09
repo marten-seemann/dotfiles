@@ -3,10 +3,10 @@
 if [[ `uname -v` =~ "Ubuntu" ]]; then
   if [[ $EUID -eq 0 ]]; then
     apt-get update
-    apt-get install -y zsh git stow zoxide fzf vim tmux
+    apt-get install -y zsh zsh-antidote git stow zoxide fzf vim tmux
   else
     echo "Run the following command to install the dependencies:"
-    echo "sudo apt update && sudo apt install -y zsh git stow zoxide fzf vim tmux"
+    echo "sudo apt update && sudo apt install -y zsh zsh-antidote git stow zoxide fzf vim tmux"
   fi
 fi
 
@@ -16,13 +16,10 @@ git submodule update
 stow -t $HOME zsh vim git tmux
 
 if [[ `uname` == 'Darwin' ]]; then
-  brew install antibody
+  brew install antidote
 fi
 
 if [[ `uname` == 'Linux' ]]; then
-  # install antibody
-  curl -sfL git.io/antibody | sh -s - -b /usr/local/bin
-
   # ask the user to set the hostname
   orig=$(head -n1 /etc/hostname)
   read -e -p "Hostname: " -i $orig hostname

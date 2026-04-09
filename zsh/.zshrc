@@ -1,8 +1,6 @@
-source <(antibody init)
-
-export ANTIBODY_HOME="$(antibody home)"
-
-antibody bundle < ~/.zsh/zsh-plugins.txt
+source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
+source <(antidote init)
+antidote bundle < ~/.zsh/zsh-plugins.txt
 
 for file in ~/.zsh/*.zsh; do
   source "$file"

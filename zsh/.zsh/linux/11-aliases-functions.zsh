@@ -2,7 +2,7 @@ update() {
   apt update
   apt upgrade
   apt autoremove 
-  echo "Updating antibody..."
-  antibody update
+  echo "Updating antidote..."
+  antidote update
   reload
 }
