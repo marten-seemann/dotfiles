@@ -1,5 +1,5 @@
 # Shell options
-export LANG=en_US.utf8
+export LANG=en_US.UTF-8
 export TERM=xterm-256color
 export EDITOR=vim
 
