@@ -13,11 +13,18 @@ fi
 git submodule init
 git submodule update
 
-stow -t $HOME zsh vim git tmux ghostty
+packages=(zsh vim git tmux ghostty)
 
 if [[ `uname` == 'Darwin' ]]; then
+  packages+=(cursor)
   brew install antidote
+
+  cursor_user_dir="$HOME/Library/Application Support/Cursor/User"
+  mkdir -p "$cursor_user_dir"
+  rm -f "$cursor_user_dir/settings.json" "$cursor_user_dir/keybindings.json"
 fi
+
+stow -t "$HOME" "${packages[@]}"
 
 if [[ `uname` == 'Linux' ]]; then
   git clone --depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:-$HOME}/.antidote
