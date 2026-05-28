@@ -1,0 +1,14 @@
+format = "$all"
+
+[directory]
+truncation_length = 0
+truncate_to_repo = false
+
+[golang]
+disabled=true
+
+[rust]
+disabled=true
+
+[cmd_duration]
+min_time = 1500
