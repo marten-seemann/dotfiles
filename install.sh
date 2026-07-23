@@ -13,11 +13,11 @@ fi
 git submodule init
 git submodule update
 
-packages=(zsh vim git tmux ghostty)
+packages=(zsh vim git tmux ghostty starship)
 
 if [[ `uname` == 'Darwin' ]]; then
   packages+=(cursor)
-  brew install antidote
+  brew install antidote starship font-hack-nerd-font
 
   cursor_user_dir="$HOME/Library/Application Support/Cursor/User"
   mkdir -p "$cursor_user_dir"
