@@ -2,3 +2,5 @@ keybind = super+left=previous_tab
 keybind = super+right=next_tab
 keybind = home=text:\x01
 keybind = end=text:\x05
+
+cursor-click-to-move = true
