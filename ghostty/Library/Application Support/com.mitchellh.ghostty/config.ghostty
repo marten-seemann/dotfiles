@@ -3,4 +3,5 @@ keybind = super+right=next_tab
 keybind = home=text:\x01
 keybind = end=text:\x05
 
+copy-on-select=clipboard
 cursor-click-to-move = true
