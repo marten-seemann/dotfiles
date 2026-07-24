@@ -1,3 +1,5 @@
+alias gs='git status -sb'
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen (%cr) %C(bold blue)%Creset' --abbrev-commit"
 alias ga='git add'
 alias gcb='git checkout -b'
 alias gco='git checkout'
