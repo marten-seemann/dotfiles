@@ -13,7 +13,7 @@ fi
 git submodule init
 git submodule update
 
-packages=(zsh vim git tmux ghostty starship)
+packages=(zsh vim git tmux ghostty starship agents)
 
 if [[ `uname` == 'Darwin' ]]; then
   packages+=(cursor)
@@ -24,6 +24,7 @@ if [[ `uname` == 'Darwin' ]]; then
   rm -f "$cursor_user_dir/settings.json" "$cursor_user_dir/keybindings.json"
 fi
 
+mkdir -p "$HOME/.agents" "$HOME/.claude"
 stow -t "$HOME" "${packages[@]}"
 
 if [[ `uname` == 'Linux' ]]; then
