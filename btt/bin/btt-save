@@ -1,0 +1,15 @@
+#!/bin/bash
+
+preset_file="$HOME/.btt_autoload_preset.json"
+if [[ ! -L "$preset_file" ]]; then
+  echo "$preset_file is not linked to the dotfiles repository; run ./install.sh first" >&2
+  exit 1
+fi
+
+osascript \
+  -e 'on run argv' \
+  -e 'tell application "BetterTouchTool"' \
+  -e 'export_preset (item 1 of argv) outputPath (item 2 of argv) with includeSettings' \
+  -e 'end tell' \
+  -e 'end run' \
+  "Default" "$(realpath "$preset_file")"
