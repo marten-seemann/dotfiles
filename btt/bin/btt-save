@@ -1,10 +1,11 @@
 #!/bin/bash
+set -euo pipefail
 
-preset_file="$HOME/.btt_autoload_preset.json"
-if [[ ! -L "$preset_file" ]]; then
-  echo "$preset_file is not linked to the dotfiles repository; run ./install.sh first" >&2
-  exit 1
-fi
+# BTT allows several presets with the same name, and export_preset resolves by
+# name, so pass the name explicitly if "Default" is ambiguous in your setup.
+preset_name="${1:-Default}"
+repo="$(cd "$(dirname "$(realpath "$0")")/.." && pwd)"
+out="$repo/preset.json"
 
 osascript \
   -e 'on run argv' \
@@ -12,4 +13,11 @@ osascript \
   -e 'export_preset (item 1 of argv) outputPath (item 2 of argv) with includeSettings' \
   -e 'end tell' \
   -e 'end run' \
-  "Default" "$(realpath "$preset_file")"
+  "$preset_name" "$out" >/dev/null
+
+# Counting matching lines rather than parsing the JSON. Enough to notice an
+# export that grabbed the wrong (empty) preset; `git diff` is the real review
+# step. Parse with python3 if this ever needs to be exact.
+echo "exported '$preset_name' to $out"
+echo "  $(grep -c BTTTriggerTypeKeyboardShortcut "$out" || true) keyboard shortcuts"
+echo "review with: git -C '$repo' diff --stat"
