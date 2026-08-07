@@ -9,10 +9,6 @@ update() {
   brew update
   brew upgrade
   brew cleanup
-  echo "Updating gem..."
-  gem update
-  echo "Updating rbenv..."
-  rbenv rehash
   echo "Updating npm..."
   npm update
   echo "Updating antidote plugins..."
