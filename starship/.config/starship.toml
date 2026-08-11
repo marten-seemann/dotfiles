@@ -1,14 +1,43 @@
-format = "$all"
+format = """
+$username\
+$hostname\
+$localip\
+$shlvl\
+$directory\
+$vcsh\
+$fossil_branch\
+$fossil_metrics\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+$hg_state\
+$pijul_channel\
+$guix_shell\
+$nix_shell\
+$spack\
+$memory_usage\
+$direnv\
+$env_var\
+$custom\
+$sudo\
+$cmd_duration\
+$line_break\
+$jobs\
+$battery\
+$time\
+$status\
+$container\
+$netns\
+$os\
+$shell\
+$character"""
 
 [directory]
 truncation_length = 0
 truncate_to_repo = false
-
-[golang]
-disabled=true
-
-[rust]
-disabled=true
 
 [cmd_duration]
 min_time = 1500
