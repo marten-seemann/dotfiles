@@ -34,8 +34,8 @@
   external = /usr/local/bin/araxisgitmerge
 	cmd = araxis-mergetool \"$LOCAL\" \"$REMOTE\" \"$MERGED\" \"$BASE\"
 	renames = true
-#[push]
-#	default = simple
+[push]
+	autoSetupRemote = true
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustExitCode = true
