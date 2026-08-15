@@ -1,4 +1,7 @@
 {
   "window.autoDetectColorScheme": true,
+  "window.nativeTabs": true,
+  "window.titleBarStyle": "native",
+  "window.openFoldersInNewWindow": "on",
   "workbench.preferredLightColorTheme": "Default Light Modern"
 }
