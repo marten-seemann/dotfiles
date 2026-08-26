@@ -17,7 +17,7 @@ packages=(zsh vim git tmux ghostty starship agents)
 
 if [[ `uname` == 'Darwin' ]]; then
   packages+=(cursor btt)
-  brew install antidote starship font-hack-nerd-font
+  brew install antidote starship font-hack-nerd-font jq
 
   cursor_user_dir="$HOME/Library/Application Support/Cursor/User"
   mkdir -p "$cursor_user_dir"

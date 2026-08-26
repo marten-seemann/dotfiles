@@ -6,6 +6,8 @@ set -euo pipefail
 preset_name="${1:-Default}"
 repo="$(cd "$(dirname "$(realpath "$0")")/.." && pwd)"
 out="$repo/preset.json"
+tmp="$(mktemp -d)"
+trap 'rm -rf "$tmp"' EXIT
 
 osascript \
   -e 'on run argv' \
@@ -13,11 +15,18 @@ osascript \
   -e 'export_preset (item 1 of argv) outputPath (item 2 of argv) with includeSettings' \
   -e 'end tell' \
   -e 'end run' \
-  "$preset_name" "$out" >/dev/null
+  "$preset_name" "$tmp/preset.json" >/dev/null
+
+# Canonicalize object keys and arrays so BTT's changing export order does not
+# hide the actual configuration changes in Git.
+jq -S '
+  walk(if type == "array" and all(.[]; type == "object") then
+      sort_by([.BTTOrder // 1000, .BTTAppBundleIdentifier // "", .BTTUUID // ""])
+    else . end)
+' "$tmp/preset.json" >"$tmp/normalized.json"
+mv "$tmp/normalized.json" "$out"
 
 # Counting matching lines rather than parsing the JSON. Enough to notice an
 # export that grabbed the wrong (empty) preset; `git diff` is the real review
 # step. Parse with python3 if this ever needs to be exact.
 echo "exported '$preset_name' to $out"
-echo "  $(grep -c BTTTriggerTypeKeyboardShortcut "$out" || true) keyboard shortcuts"
-echo "review with: git -C '$repo' diff --stat"
