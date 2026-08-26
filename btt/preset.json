@@ -38,7 +38,7 @@
     "BTTDaysToKeepHistory": 14,
     "BTTDefaultTBIconHeight": 22,
     "BTTDefaultTBIconWidth": 22,
-    "BTTDidRegisterForUpdateStats": "6.640",
+    "BTTDidRegisterForUpdateStats": "6.746",
     "BTTDismissIfNothingToShow": true,
     "BTTDontRestartAfterSleep": true,
     "BTTDrawingAreaHeight": 626,
@@ -95,7 +95,7 @@
     "BTTNotchBarStandardWidgetModeHideRightFixed": false,
     "BTTNotchBarStandardWidgetModeHideRightScrollable": false,
     "BTTNotchBarStandardWidgetModeShowOriginalStatusIcons": false,
-    "BTTNumberOfStarts": 28259,
+    "BTTNumberOfStarts": 28263,
     "BTTPathSampleSize": 100,
     "BTTSavedMousePosition": "{190.01171875, 33.80078125}",
     "BTTScreenshotOpenImgurInBrowser": true,
@@ -189,6 +189,17 @@
         "BTTDisableGlobalTriggers": false
       },
       "BTTTriggers": [
+        {
+          "BTTKeyRemapFromKey": "51539607759",
+          "BTTKeyRemapToKey": "30064771139",
+          "BTTLastUpdatedAt": 1787753623.2588019,
+          "BTTOrder": 0,
+          "BTTShortcutToSend": "51539607759",
+          "BTTTriggerClass": "BTTTriggerTypeOtherTriggers",
+          "BTTTriggerType": 805,
+          "BTTTriggerTypeDescriptionReadOnly": "Remap Keyboard Key: voice_command => f10",
+          "BTTUUID": "1E574E69-2705-420E-9B05-90B5C296B988"
+        },
         {
           "BTTActionsToExecute": [
             {
@@ -296,34 +307,6 @@
           "BTTTriggerType": 624,
           "BTTTriggerTypeDescriptionReadOnly": "Please Select a Trigger ",
           "BTTUUID": "CD61EF5C-86F0-4FB3-BE2A-48AD8D6985C7"
-        },
-        {
-          "BTTActionsToExecute": [
-            {
-              "BTTIsPureAction": true,
-              "BTTLastUpdatedAt": 1784988719.7994709,
-              "BTTLayoutIndependentActionChar": "F10",
-              "BTTOrder": 52,
-              "BTTPredefinedActionName": "",
-              "BTTPredefinedActionType": 264,
-              "BTTShortcutToSend": "109",
-              "BTTTriggerParentUUID": "08DF8EE5-C6FD-4F44-8F60-CB7A80DD48C9",
-              "BTTUUID": "C0B7D22D-B7B4-4197-96E4-04E0B7B35CCC"
-            }
-          ],
-          "BTTAdditionalConfiguration": "8388608",
-          "BTTAutoAdaptToKeyboardLayout": 0,
-          "BTTLastUpdatedAt": 1784988745.202996,
-          "BTTLayoutIndependentChar": "",
-          "BTTOrder": 1,
-          "BTTShortcutAdvancedModifierKeys": "8388608",
-          "BTTShortcutKeyCode": 176,
-          "BTTShortcutKeyboardType": -2052004921,
-          "BTTShortcutModifierKeys": 8388608,
-          "BTTTriggerClass": "BTTTriggerTypeKeyboardShortcut",
-          "BTTTriggerOnDown": 1,
-          "BTTTriggerType": 0,
-          "BTTUUID": "08DF8EE5-C6FD-4F44-8F60-CB7A80DD48C9"
         },
         {
           "BTTAdditionalDataJSON": {
@@ -441,7 +424,7 @@
           ],
           "BTTAdditionalConfiguration": "8388608",
           "BTTAutoAdaptToKeyboardLayout": 0,
-          "BTTLastUpdatedAt": 1785062196.630146,
+          "BTTLastUpdatedAt": 1787752981.4274468,
           "BTTLayoutIndependentChar": "HOME",
           "BTTOrder": 0,
           "BTTShortcutAdvancedModifierKeys": "8388608",
@@ -469,7 +452,7 @@
           ],
           "BTTAdditionalConfiguration": "8388608",
           "BTTAutoAdaptToKeyboardLayout": 0,
-          "BTTLastUpdatedAt": 1785062196.630151,
+          "BTTLastUpdatedAt": 1787752981.427459,
           "BTTLayoutIndependentChar": "END",
           "BTTOrder": 1,
           "BTTShortcutAdvancedModifierKeys": "8388608",
@@ -515,7 +498,7 @@
           ],
           "BTTAdditionalConfiguration": "8388608",
           "BTTAutoAdaptToKeyboardLayout": 0,
-          "BTTLastUpdatedAt": 1785062196.6301351,
+          "BTTLastUpdatedAt": 1787752981.427465,
           "BTTLayoutIndependentChar": "HOME",
           "BTTOrder": 0,
           "BTTShortcutAdvancedModifierKeys": "8388608",
@@ -543,7 +526,7 @@
           ],
           "BTTAdditionalConfiguration": "8388608",
           "BTTAutoAdaptToKeyboardLayout": 0,
-          "BTTLastUpdatedAt": 1785062196.630141,
+          "BTTLastUpdatedAt": 1787752981.4274368,
           "BTTLayoutIndependentChar": "END",
           "BTTOrder": 1,
           "BTTShortcutAdvancedModifierKeys": "8388608",
@@ -586,7 +569,7 @@
           ],
           "BTTAdditionalConfiguration": "8388608",
           "BTTAutoAdaptToKeyboardLayout": 0,
-          "BTTLastUpdatedAt": 1785062196.630115,
+          "BTTLastUpdatedAt": 1787752981.42747,
           "BTTLayoutIndependentChar": "HOME",
           "BTTOrder": 0,
           "BTTShortcutAdvancedModifierKeys": "8388608",
@@ -614,7 +597,7 @@
           ],
           "BTTAdditionalConfiguration": "8388608",
           "BTTAutoAdaptToKeyboardLayout": 0,
-          "BTTLastUpdatedAt": 1785062196.630125,
+          "BTTLastUpdatedAt": 1787752981.4274259,
           "BTTLayoutIndependentChar": "END",
           "BTTOrder": 1,
           "BTTShortcutAdvancedModifierKeys": "8388608",
@@ -651,7 +634,7 @@
           ],
           "BTTAdditionalConfiguration": "8388608",
           "BTTAutoAdaptToKeyboardLayout": 0,
-          "BTTLastUpdatedAt": 1785062196.6301088,
+          "BTTLastUpdatedAt": 1787752981.4274321,
           "BTTLayoutIndependentChar": "HOME",
           "BTTOrder": 0,
           "BTTShortcutAdvancedModifierKeys": "8388608",
@@ -679,7 +662,7 @@
           ],
           "BTTAdditionalConfiguration": "8388608",
           "BTTAutoAdaptToKeyboardLayout": 0,
-          "BTTLastUpdatedAt": 1785062196.6300621,
+          "BTTLastUpdatedAt": 1787752981.4273992,
           "BTTLayoutIndependentChar": "END",
           "BTTOrder": 1,
           "BTTShortcutAdvancedModifierKeys": "8388608",
@@ -696,5 +679,5 @@
   ],
   "BTTPresetName": "Default",
   "BTTPresetSnapAreas": [],
-  "BTTPresetUUID": "40512147-6376-4385-9E3C-E0C9760F72B8"
+  "BTTPresetUUID": "530A03B8-EE02-4127-92E7-1E46F7B855EA"
 }
