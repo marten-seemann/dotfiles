@@ -16,7 +16,7 @@ git submodule update
 packages=(zsh vim git tmux ghostty starship agents)
 
 if [[ `uname` == 'Darwin' ]]; then
-  packages+=(cursor)
+  packages+=(cursor btt)
   brew install antidote starship font-hack-nerd-font
 
   cursor_user_dir="$HOME/Library/Application Support/Cursor/User"

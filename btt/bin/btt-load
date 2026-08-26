@@ -1,0 +1,15 @@
+#!/bin/bash
+set -euo pipefail
+
+repo="$(cd "$(dirname "$(realpath "$0")")/.." && pwd)"
+preset="$repo/preset.json"
+
+if [[ ! -f "$preset" ]]; then
+  echo "no preset at $preset" >&2
+  exit 1
+fi
+
+# replaceExisting=1 is required. Without it BTT treats a preset whose name and
+# trigger UUIDs it already has as a duplicate and skips the import silently.
+open "btt://import_preset/?path=${preset// /%20}&replaceExisting=1"
+echo "asked BTT to import $preset"
