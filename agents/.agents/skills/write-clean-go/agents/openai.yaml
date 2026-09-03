@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Clean Go"
+  short_description: "Write simple, encapsulated, idiomatic Go"
+  default_prompt: "Use $write-clean-go to implement this Go change with clean package boundaries."
