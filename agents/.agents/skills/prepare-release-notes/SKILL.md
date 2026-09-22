@@ -28,7 +28,7 @@ If the hosting platform auto-generates a changelog, write only the curated relea
 
 ## Build the change inventory
 
-Use local tags, commit history, diffs, and repository-host metadata to map changes to pull requests. Inspect the important pull requests and their patches; titles and generated summaries alone are not sufficient evidence.
+Use local tags, commit history, diffs, and repository-host metadata to map changes to pull requests. Inspect the important pull requests and their patches; titles and generated summaries alone are not sufficient evidence. Track every pull request in the release scope so exclusions can be reported completely.
 
 Describe the net change from the previous release, not the sequence of development commits:
 
@@ -46,7 +46,7 @@ Include:
 - important correctness, interoperability, security, and reliability fixes;
 - substantial, measured performance improvements.
 
-Usually omit:
+Usually omit from the release notes:
 
 - CI and dependency maintenance;
 - test-only and flaky-test fixes;
@@ -78,3 +78,9 @@ Before writing the file:
 4. Read the finished notes once as a release consumer, removing changelog noise and development history.
 
 Write to the requested Markdown path. If none is given, use `release-notes.md` in the repository root. Do not modify code or generate a changelog.
+
+## Report exclusions in chat
+
+In the final chat response, list every in-scope pull request excluded from the release notes, with its number, title, link, and a brief reason for exclusion. Keep this list outside the release notes file.
+
+The only exclusions that may be left out of this list are dependency bumps authored by Dependabot and limited to non-Go dependencies, such as GitHub Actions or Terraform. Verify the author and dependencies before applying this exception. Go dependency and toolchain updates must remain in the list when excluded from the notes, even if authored by Dependabot; so must all other excluded CI, test, refactor, documentation, and maintenance pull requests. If no reportable exclusions remain, say so.
