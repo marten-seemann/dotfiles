@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Commit Message"
+  short_description: "Write repository-native commit messages"
+  default_prompt: "Use $write-commit-message to propose a commit message for the current changes."
