@@ -10,6 +10,7 @@ Write straightforward Go that preserves type invariants and follows the reposito
 ## Rules
 
 - Trace every caller and mutation before changing a type or shared function.
+- Keep each struct definition and all its receiver methods in the same file.
 - Treat unexported struct fields as owned by the type. Code outside its constructors and methods must not read or mutate them directly, even from the same package.
 - Treat unexported methods as internal to their receiver type: only other methods on that type may call them. The sole exception is an unexported method on an exported type that code elsewhere in the same package must call but callers outside the package must not.
 - Pass required state to the constructor and return a fully initialized value. Never construct an object and then patch its unexported fields at the call site.
@@ -18,10 +19,11 @@ Write straightforward Go that preserves type invariants and follows the reposito
 - Keep invariants in one place. Prefer one concrete type and direct control flow over speculative interfaces, helpers, or configuration.
 - Use the standard library and existing repository patterns before adding code or dependencies.
 - Scale variable names to their scope: the smaller the scope, the shorter the name. Use very short names in loops and short functions; use longer names when a larger or more complex scope needs clarity. For example, a connection might be `c` or `conn`, a session `s` or `sess`, and a listener `ln`.
-- Use `&T{...}` for pointers to initialized struct literals. `new(T{...})` is not clean Go; reserve `new(T)` for allocating a zero value.
+- Never declare or assign several variables from a list of values in one statement (parallel assignment), such as `a, b := int64(-1), int64(-1)` or `x, y = 1, 2`; write one statement per variable. The only exception is swapping values (`a, b = b, a`). This does not affect functions that return multiple values, such as `n, err := r.Read(b)`.
+- Use `&T{...}` for pointers to structs, including `&T{}` for zero values; do not use `new(T)` or `new(T{...})` for structs. Reserve `new(value)` (Go 1.26+) for pointers to scalar values, such as `new(true)` or `new(42)`, instead of temporary variables or pointer helpers.
 - Treat `t.Context()` as an anti-pattern in the vast majority of tests because it is canceled only after the test function returns. Use `context.Background()` in most cases; use `t.Context()` only when its cleanup-time cancellation is specifically needed.
 - Format changed Go files and run the smallest relevant tests, then the broader affected package tests when practical.
 
 ## Review Check
 
-Before finishing, search for direct field access on changed structs. Move any caller-owned initialization into the constructor and any valid mutation behind a behavior-named method.
+Before finishing, review the changed code against the rules above.
