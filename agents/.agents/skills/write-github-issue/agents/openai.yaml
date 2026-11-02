@@ -1,0 +1,3 @@
+interface:
+  display_name: "Write GitHub Issue"
+  short_description: "Draft GitHub issues in Marten's maintainer style"
