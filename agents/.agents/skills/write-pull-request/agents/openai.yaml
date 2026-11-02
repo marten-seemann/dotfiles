@@ -1,0 +1,3 @@
+interface:
+  display_name: "Write Pull Request"
+  short_description: "Draft PR descriptions in Marten's maintainer style"
